@@ -1,7 +1,7 @@
 # Git hours action
 Use git hours to get estimations about the effort spent in a repository
 
-![.github/workflows/main.yml](https://github.com/denstorti/git-hours-action/workflows/.github/workflows/main.yml/badge.svg?event=project_card)
+![.github/workflows/main.yml](https://github.com/denstorti/git-hours-action/workflows/.github/workflows/main.yml/badge.svg)
 
 > Based on https://github.com/kimmobrunfeldt/git-hours
 
@@ -48,3 +48,5 @@ Json data containing a break down per user email
 - name: Get the output 
   run: echo -e '${{steps.githours.outputs.hours}}' 
 ```
+
+[Also check the example of workflow](./.github/workflows)
