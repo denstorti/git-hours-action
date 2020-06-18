@@ -6,5 +6,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 branding:
-  icon: 'award'
-  color: 'green'
+  icon: clock
+  color: blue
+outputs:
+  hours:
+    description: "The amount of time spent in the repository"
