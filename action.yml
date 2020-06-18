@@ -4,4 +4,7 @@ author: "Denis Silva (@denstorti)"
 description: 'Git hours action'
 runs:
   using: 'docker'
-  image: 'docker://khor/git-hours'
+  image: 'Dockerfile'
+branding:
+  icon: 'award'
+  color: 'green'

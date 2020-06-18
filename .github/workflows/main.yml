@@ -1,0 +1,24 @@
+on: [push]
+
+jobs:
+  git_hours_job:
+    runs-on: ubuntu-latest
+    name: Test - Calculate hours spent
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Git hours action step
+        uses: ./ # Uses an action in the root directory
+        id: githours
+      # Use the output from the `hello` step
+      - name: Get the output 
+        run: echo -e '${{steps.githours.outputs.hours}}' > report.json
+      - name: Upload report
+        uses: actions/upload-artifact@v1
+        with:
+          name: hours_spent
+          path: report.json
